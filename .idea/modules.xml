@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/tw_homework_training.iml" filepath="$PROJECT_DIR$/tw_homework_training.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tw_homework_training_main.iml" filepath="$PROJECT_DIR$/.idea/modules/tw_homework_training_main.iml" group="tw_homework_training" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tw_homework_training_test.iml" filepath="$PROJECT_DIR$/.idea/modules/tw_homework_training_test.iml" group="tw_homework_training" />
+    </modules>
+  </component>
+</project>
