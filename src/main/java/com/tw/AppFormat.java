@@ -6,7 +6,7 @@ public class AppFormat {
 
     //检查添加学生信息的格式
     public static boolean checkNewStudent(String str){
-        String pattern = "^([\\u4e00-\\u9fa5]{2,},)([1-9][0-9]*,)([\\u4e00-\\u9fa5]{2,}:([1-9][0-9]{0,1}|100),?)+$";
+        String pattern = "^([\\u4e00-\\u9fa5]{2,},)([1-9][0-9]*,)([\\u4e00-\\u9fa5]{2,}:([1-9][0-9]?|100),?)+$";
         try {
             boolean isMatched = Pattern.matches(pattern, str.replaceAll(" ", "").trim());
             if (isMatched){
@@ -23,7 +23,7 @@ public class AppFormat {
 
     //检查输入学生学号的格式
     public static boolean checkStudentId(String str){
-        String pattern = "^(([1-9][0-9]{0,}),?)+$";
+        String pattern = "^(([1-9][0-9]*),?)+$";
 
         boolean isMatched = Pattern.matches(pattern, str.replaceAll(" ", "").trim());
         if (isMatched){
