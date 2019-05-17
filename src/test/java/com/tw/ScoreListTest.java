@@ -1,11 +1,13 @@
 package com.tw;
 
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -41,6 +43,10 @@ public class ScoreListTest {
 
     @Test
     public void should_score_list_record_new_student() {
+
+        //由于一次性测试会发生冲突
+        ScoreList.setScoreList(new HashMap<>());
+
         ScoreList.record(student1);
         assertThat(ScoreList.getScoreList().size()).isEqualTo(1);
 
@@ -60,6 +66,8 @@ public class ScoreListTest {
 
     @Test
     public void should_score_list_print_scores_by_ids() throws Exception {
+        ScoreList.setScoreList(new HashMap<>());
+        CourseList.setCourses(new ArrayList<>());
         ScoreList.record(student1);
         CourseList.tryAdd(student1);
         student1.setTotalScore(Utils.calcTotalScore(student1));

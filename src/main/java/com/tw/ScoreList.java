@@ -20,6 +20,10 @@ public class ScoreList {
         return scoreList;
     }
 
+    public static void setScoreList(Map<String, Student> scoreList) {
+        ScoreList.scoreList = scoreList;
+    }
+
     public static void printScoreList(String input){
         System.out.println("成绩单");
         CourseList.printCourseList();

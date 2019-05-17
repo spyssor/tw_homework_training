@@ -6,6 +6,7 @@ import org.junit.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import static org.fest.assertions.api.Assertions.assertThat;
@@ -45,6 +46,7 @@ public class CourseListTest {
 
     @Test
     public void should_course_list_printed_correctly(){
+        CourseList.setCourses(new ArrayList<>());
         CourseList.tryAdd(student1);
         CourseList.printCourseList();
         String res1 = "姓名|数学|英语|平均分|总分\r\n";

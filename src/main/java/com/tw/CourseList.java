@@ -11,6 +11,10 @@ public class CourseList {
         return courses;
     }
 
+    public static void setCourses(List<String> courses) {
+        CourseList.courses = courses;
+    }
+
     public static void tryAdd(Student student){
         Map<String, String> scores = student.getScores();
         for (String course : scores.keySet()) {
